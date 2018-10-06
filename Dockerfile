@@ -31,7 +31,7 @@ RUN cd monero \
   && mkdir build \
   && cd build \
   && cmake -D BUILD_TESTS=OFF -D CMAKE_BUILD_TYPE=release ../ \
-  && make -j48 \
+  && make -j$(nproc) \
   && strip bin/*
 
 
